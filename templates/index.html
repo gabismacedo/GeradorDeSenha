@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Token</title>
+</head>
+<body>
+    <h1>Gerador de Token</h1>
+    <form method="post">
+        <label for="qtd">Quantidade de caracteres:</label>
+        <input id="qtd" name="qtd" type="number" min="12" max="30" required>
+        <button type="submit">Gerar token</button>
+    </form>
+
+    {% if token %}
+    <section>
+      <h2>Token gerado:</h2>
+      <p>{{ token }}</p>
+    </section>
+    {% endif %}
+</body>
+</html>
